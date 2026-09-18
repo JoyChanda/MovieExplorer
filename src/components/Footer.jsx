@@ -40,7 +40,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="footer-bottom">
           <p className="copyright">
-            © 2026 <strong>MovieExplorer</strong>. All rights reserved.
+            © 2026 <strong>JoyC</strong>. All rights reserved.
           </p>
           <div className="social-links">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">

@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import { X, Star, Calendar, Clock, Globe, Tv, Tag } from 'lucide-react';
+import { X, Star, Calendar, Clock, Globe, Tag } from 'lucide-react';
 import { stripHtml, formatReleaseYear, getPosterImage } from '../utils/formatters';
 import './ShowModal.css';
+
+const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80';
 
 const ShowModal = ({ show, onClose }) => {
   if (!show) return null;
@@ -24,7 +26,6 @@ const ShowModal = ({ show, onClose }) => {
     };
   }, [onClose]);
 
-  // Backdrop backdrop image handling
   const backdropUrl = show.image?.original || getPosterImage(show.image);
   const rating = show.rating?.average ? show.rating.average.toFixed(1) : 'N/A';
   const summaryText = stripHtml(show.summary);
@@ -34,6 +35,11 @@ const ShowModal = ({ show, onClose }) => {
     if (e.target === e.currentTarget) {
       onClose();
     }
+  };
+
+  const handleImageError = (e) => {
+    e.target.onerror = null;
+    e.target.src = FALLBACK_IMAGE;
   };
 
   return (
@@ -46,7 +52,12 @@ const ShowModal = ({ show, onClose }) => {
 
         {/* Modal Backdrop Banner */}
         <div className="modal-backdrop-container">
-          <img src={backdropUrl} alt={show.name} className="modal-backdrop-img" />
+          <img 
+            src={backdropUrl} 
+            alt={show.name} 
+            className="modal-backdrop-img" 
+            onError={handleImageError}
+          />
           <div className="modal-backdrop-gradient"></div>
         </div>
 

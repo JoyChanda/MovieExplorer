@@ -3,10 +3,17 @@ import { Star, Calendar } from 'lucide-react';
 import { formatReleaseYear, getPosterImage } from '../utils/formatters';
 import './ShowCard.css';
 
+const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80';
+
 const ShowCard = ({ show, onSelectShow }) => {
   const posterUrl = getPosterImage(show.image);
   const releaseYear = formatReleaseYear(show.premiered);
   const rating = show.rating?.average ? show.rating.average.toFixed(1) : 'N/A';
+
+  const handleImageError = (e) => {
+    e.target.onerror = null;
+    e.target.src = FALLBACK_IMAGE;
+  };
 
   return (
     <div className="show-card">
@@ -16,6 +23,7 @@ const ShowCard = ({ show, onSelectShow }) => {
           alt={show.name} 
           className="poster-image"
           loading="lazy" 
+          onError={handleImageError}
         />
         {show.rating?.average && (
           <div className="rating-badge">
