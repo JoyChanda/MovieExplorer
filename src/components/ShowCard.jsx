@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Calendar } from 'lucide-react';
+import { Star, Calendar, Eye, ArrowRight } from 'lucide-react';
 import { formatReleaseYear, getPosterImage } from '../utils/formatters';
 import './ShowCard.css';
 
@@ -27,7 +27,7 @@ const ShowCard = ({ show, onSelectShow }) => {
         />
         {show.rating?.average && (
           <div className="rating-badge">
-            <Star size={14} fill="#facc15" color="#facc15" />
+            <Star size={13} fill="#facc15" color="#facc15" />
             <span>{rating}</span>
           </div>
         )}
@@ -52,7 +52,9 @@ const ShowCard = ({ show, onSelectShow }) => {
           className="see-details-btn" 
           onClick={() => onSelectShow(show)}
         >
-          See Details
+          <Eye size={16} className="btn-icon" />
+          <span>See Details</span>
+          <ArrowRight size={15} className="btn-arrow" />
         </button>
       </div>
     </div>

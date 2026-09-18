@@ -3,7 +3,7 @@ import { fetchAllShows, searchShows } from '../services/tvmazeApi';
 import SearchBar from '../components/SearchBar';
 import ShowCard from '../components/ShowCard';
 import ShowModal from '../components/ShowModal';
-import Loader from '../components/Loader';
+import { SatelliteRing } from '../components/loading-ui/satellite-ring';
 import ErrorMessage from '../components/ErrorMessage';
 import EmptyState from '../components/EmptyState';
 import './Movies.css';
@@ -80,9 +80,12 @@ const Movies = () => {
       <div className="movies-container">
         {/* Loading State */}
         {loading && (
-          <Loader 
-            message={activeQuery ? `Searching for "${activeQuery}"...` : 'Fetching TV shows database...'} 
-          />
+          <div className="movies-loading">
+            <SatelliteRing size={56} />
+            <p className="movies-loading-text">
+              {activeQuery ? `Searching for "${activeQuery}"...` : 'Fetching TV shows database...'}
+            </p>
+          </div>
         )}
 
         {/* Error State */}

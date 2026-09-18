@@ -47,7 +47,7 @@ const ShowModal = ({ show, onClose }) => {
       <div className="modal-card">
         {/* Top Header & Close Button */}
         <button className="modal-close-top" onClick={onClose} aria-label="Close Modal">
-          <X size={22} />
+          <X size={20} className="close-top-icon" />
         </button>
 
         {/* Modal Backdrop Banner */}
@@ -129,8 +129,8 @@ const ShowModal = ({ show, onClose }) => {
           {/* Modal Action Buttons */}
           <div className="modal-footer-actions">
             <button className="modal-close-bottom" onClick={onClose}>
-              <X size={18} />
-              <span>Close</span>
+              <X size={18} className="close-btn-icon" />
+              <span>Close Details</span>
             </button>
           </div>
         </div>

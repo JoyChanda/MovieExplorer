@@ -42,6 +42,22 @@
   padding: 2.5rem 1.5rem;
 }
 
+.movies-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  min-height: 300px;
+  gap: 1.25rem;
+}
+
+.movies-loading-text {
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .results-info {
   display: flex;
   align-items: center;
