@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Star, Calendar, Clock, Globe, Tag } from 'lucide-react';
+import { X, Star, Calendar, Clock, Tag } from 'lucide-react';
 import { stripHtml, formatReleaseYear, getPosterImage } from '../utils/formatters';
 import './ShowModal.css';
 
@@ -128,17 +128,6 @@ const ShowModal = ({ show, onClose }) => {
 
           {/* Modal Action Buttons */}
           <div className="modal-footer-actions">
-            {show.officialSite && (
-              <a 
-                href={show.officialSite} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="official-site-btn"
-              >
-                <Globe size={16} />
-                <span>Official Website</span>
-              </a>
-            )}
             <button className="modal-close-bottom" onClick={onClose}>
               <X size={18} />
               <span>Close</span>

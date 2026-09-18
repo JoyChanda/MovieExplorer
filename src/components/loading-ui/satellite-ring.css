@@ -1,0 +1,62 @@
+.satellite-ring-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.satellite-spinner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring-outer {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 4px solid rgba(225, 29, 72, 0.2);
+}
+
+.ring-inner {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: var(--accent-color, #e11d48);
+  border-right-color: var(--accent-color, #e11d48);
+  animation: satelliteSpin 1.1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.ring-core {
+  width: 35%;
+  height: 35%;
+  background-color: var(--accent-color, #e11d48);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(225, 29, 72, 0.8);
+  animation: satellitePulse 1.1s ease-in-out infinite alternate;
+}
+
+@keyframes satelliteSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes satellitePulse {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+    box-shadow: 0 0 16px rgba(225, 29, 72, 0.9);
+  }
+}
