@@ -1,3 +1,7 @@
+:root {
+  --navbar-height: 70px;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -6,4 +10,13 @@
 
 .main-content {
   flex: 1;
+  padding-top: var(--navbar-height);
 }
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 64px;
+  }
+}
+
+
