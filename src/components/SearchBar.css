@@ -23,6 +23,7 @@
 
 .search-input {
   width: 100%;
+  min-height: 48px;
   padding: 0.9rem 3rem 0.9rem 3.25rem;
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -53,6 +54,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 36px;
+  height: 36px;
   padding: 0.25rem;
   border-radius: 50%;
   transition: color 0.2s ease, background-color 0.2s ease;
@@ -64,6 +67,10 @@
 }
 
 .search-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
   background-color: var(--accent-color);
   color: white;
   border: none;
@@ -84,6 +91,7 @@
 @media (max-width: 640px) {
   .search-bar-form {
     flex-direction: column;
+    gap: 0.85rem;
   }
 
   .search-input-wrapper {
@@ -94,3 +102,4 @@
     width: 100%;
   }
 }
+

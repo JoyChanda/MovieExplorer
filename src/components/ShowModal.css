@@ -225,14 +225,16 @@
 .modal-close-bottom {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.55rem;
+  min-height: 48px;
   background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0.7rem 1.75rem;
+  padding: 0.75rem 1.75rem;
   border-radius: 9999px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 15px rgba(225, 29, 72, 0.35);
@@ -279,6 +281,12 @@
     font-size: 1.5rem;
   }
 
+  .modal-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
   .modal-footer-actions {
     flex-direction: column;
     width: 100%;
@@ -289,3 +297,4 @@
     justify-content: center;
   }
 }
+

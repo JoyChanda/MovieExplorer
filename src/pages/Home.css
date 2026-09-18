@@ -114,7 +114,10 @@
 }
 
 .cta-box-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
   background-color: white;
   color: #be123c;
   padding: 0.9rem 2.25rem;
@@ -128,3 +131,44 @@
   transform: scale(1.04);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
+
+@media (max-width: 640px) {
+  .features-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .home-cta-section {
+    padding: 3rem 1rem;
+  }
+
+  .cta-box {
+    padding: 2.5rem 1.25rem;
+    border-radius: 20px;
+  }
+
+  .cta-box h2 {
+    font-size: 1.65rem;
+  }
+
+  .cta-box-btn {
+    width: 100%;
+  }
+}
+

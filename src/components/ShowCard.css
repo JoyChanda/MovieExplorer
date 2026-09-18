@@ -95,6 +95,7 @@
 .see-details-btn {
   margin-top: auto;
   width: 100%;
+  min-height: 46px;
   background: linear-gradient(135deg, rgba(225, 29, 72, 0.15) 0%, rgba(225, 29, 72, 0.08) 100%);
   color: #fb7185;
   border: 1px solid rgba(225, 29, 72, 0.35);
@@ -112,6 +113,7 @@
   overflow: hidden;
   backdrop-filter: blur(8px);
 }
+
 
 .btn-icon {
   transition: transform 0.3s ease;
