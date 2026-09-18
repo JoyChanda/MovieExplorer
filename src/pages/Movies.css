@@ -4,9 +4,9 @@
 }
 
 .movies-header {
-  background: linear-gradient(180deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 1) 100%);
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 1) 100%);
   border-bottom: 1px solid var(--border-color);
-  padding: 3rem 1.5rem;
+  padding: 3.5rem 1.5rem 2.5rem;
   text-align: center;
 }
 
@@ -29,6 +29,11 @@
 .movies-subtitle {
   color: var(--text-muted);
   font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.search-bar-wrapper {
+  margin-top: 1.5rem;
 }
 
 .movies-container {
@@ -50,6 +55,10 @@
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--text-main);
+}
+
+.query-highlight {
+  color: var(--accent-color);
 }
 
 .results-badge {
@@ -76,7 +85,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.25 ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .show-card-preview:hover {
